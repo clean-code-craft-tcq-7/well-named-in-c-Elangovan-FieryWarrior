@@ -1,8 +1,6 @@
 #ifndef COLORPAIR_TEST_H
 #define COLORPAIR_TEST_H
 
-#include "colorpair.h"
-
 void testNumberToPair(int pairNumber,
     enum MajorColor expectedMajor,
     enum MinorColor expectedMinor);
