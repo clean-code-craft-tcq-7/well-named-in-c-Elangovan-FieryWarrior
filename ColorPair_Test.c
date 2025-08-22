@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <assert.h>
-#inlcude "ColorPair.h"
+#include "ColorPair.h"
 #include "ColorPair_Test.h"
 
 void testNumberToPair(int pairNumber,
     enum MajorColor expectedMajor,
+    
     enum MinorColor expectedMinor)
 {
     ColorPair colorPair = GetColorFromPairNumber(pairNumber);
