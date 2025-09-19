@@ -34,3 +34,28 @@ int GetPairNumberFromColor(const ColorPair* colorPair) {
     return colorPair->majorColor * numberOfMinorColors +
             colorPair->minorColor + 1;
 }
+
+void PrintReferenceManual()
+{
+    printf("Reference Manual\n");
+    printf("-----------------------------\n");
+    printf("| Pair No | Major  | Minor  |\n");
+    printf("-----------------------------\n");
+    char colorPairStr[32];
+    for (int i = 1; i <= numberOfMajorColors * numberOfMinorColors; i++)
+    {
+        ColorPair colorDetails = GetColorFromPairNumber(i);
+        ColorPairToString(&colorDetails, colorPairStr);
+        printf("| %7d | %6s | %6s |\n", 
+            i, 
+            MajorColorNames[colorDetails.majorColor], 
+            MinorColorNames[colorDetails.minorColor]);
+    }
+    printf("-----------------------------\n");
+}
+
+int main()
+{
+    PrintReferenceManual();
+    return 0;
+}
