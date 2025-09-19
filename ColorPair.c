@@ -34,7 +34,6 @@ int GetPairNumberFromColor(const ColorPair* colorPair) {
     return colorPair->majorColor * numberOfMinorColors +
             colorPair->minorColor + 1;
 }
-
 void PrintReferenceManual()
 {
     printf("Reference Manual\n");
@@ -52,10 +51,4 @@ void PrintReferenceManual()
             MinorColorNames[colorDetails.minorColor]);
     }
     printf("-----------------------------\n");
-}
-
-int main()
-{
-    PrintReferenceManual();
-    return 0;
 }
